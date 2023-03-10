@@ -12,9 +12,14 @@ return {
   },
   config = function()
     local dap = require("dap")
+    local dapui = require("dapui")
     local mason_dap = require("mason-nvim-dap")
     local sign_define = vim.fn.sign_define
     local breakpoint = require("goto-breakpoints")
+
+    -- nvim-dap-ui
+    require("dapui").setup()
+    vim.keymap({ "n" }, "<leader>du", dapui.toggle())
 
     sign_define("DapBreakpoint", { text = "", texthl = "Error" })
     sign_define("DapBreakpointCondition", { text = "לּ", texthl = "Error" })
@@ -47,7 +52,7 @@ return {
     vim.keymap.set({ "n" }, "[b", breakpoint.prev, { desc = "Go to previous breakpoint" })
 
     -- DAP virtual text --
-    require("nvim-dap-virtual-text").setup()
+    require("nvim-dap-virtual-text").setup({})
 
     -- Loads .vscode/launch.json files if available
     require("dap.ext.vscode").load_launchjs(nil, {
