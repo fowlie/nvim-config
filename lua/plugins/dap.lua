@@ -18,8 +18,10 @@ return {
     local breakpoint = require("goto-breakpoints")
 
     -- nvim-dap-ui
-    require("dapui").setup()
-    vim.keymap({ "n" }, "<leader>du", dapui.toggle())
+    dapui.setup()
+    vim.keymap.set("n", "<leader>du", function()
+      return dapui.toggle()
+    end, { desc = "Toggle debug UI" })
 
     sign_define("DapBreakpoint", { text = "", texthl = "Error" })
     sign_define("DapBreakpointCondition", { text = "לּ", texthl = "Error" })
@@ -37,19 +39,19 @@ return {
         dap.set_breakpoint(condition)
       end)
     end, { desc = "DAP set conditional breakpoint" })
-    vim.keymap.set({ "n" }, "<leader>dc", dap.continue, { desc = "DAP continue" })
-    vim.keymap.set({ "n" }, "<leader>ds", dap.step_over, { desc = "DAP step over" })
-    vim.keymap.set({ "n" }, "<leader>di", dap.step_into, { desc = "DAP step into" })
-    vim.keymap.set({ "n" }, "<leader>do", dap.step_out, { desc = "DAP step out" })
-    vim.keymap.set({ "n" }, "<leader>db", dap.toggle_breakpoint, { desc = "DAP toggle breakpoint" })
-    vim.keymap.set({ "n" }, "<leader>dr", dap.repl.open, { desc = "DAP open REPL" })
-    vim.keymap.set({ "n" }, "<leader>dl", dap.run_last, { desc = "DAP run last session" })
-    vim.keymap.set({ "n" }, "<leader>dr", dap.restart, { desc = "DAP restart session" })
-    vim.keymap.set({ "n" }, "<leader>dq", dap.terminate, { desc = "DAP terminate session" })
+    vim.keymap.set("n", "<leader>dc", dap.continue, { desc = "DAP continue" })
+    vim.keymap.set("n", "<leader>ds", dap.step_over, { desc = "DAP step over" })
+    vim.keymap.set("n", "<leader>di", dap.step_into, { desc = "DAP step into" })
+    vim.keymap.set("n", "<leader>do", dap.step_out, { desc = "DAP step out" })
+    vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "DAP toggle breakpoint" })
+    vim.keymap.set("n", "<leader>dr", dap.repl.open, { desc = "DAP open REPL" })
+    vim.keymap.set("n", "<leader>dl", dap.run_last, { desc = "DAP run last session" })
+    vim.keymap.set("n", "<leader>dr", dap.restart, { desc = "DAP restart session" })
+    vim.keymap.set("n", "<leader>dq", dap.terminate, { desc = "DAP terminate session" })
 
     -- Go to breakpoints
-    vim.keymap.set({ "n" }, "]b", breakpoint.next, { desc = "Go to next breakpoint" })
-    vim.keymap.set({ "n" }, "[b", breakpoint.prev, { desc = "Go to previous breakpoint" })
+    vim.keymap.set("n", "]b", breakpoint.next, { desc = "Go to next breakpoint" })
+    vim.keymap.set("n", "[b", breakpoint.prev, { desc = "Go to previous breakpoint" })
 
     -- DAP virtual text --
     require("nvim-dap-virtual-text").setup({})
