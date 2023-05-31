@@ -31,7 +31,7 @@ return {
 
     -- Automatically set up installed DAP adapters
     mason_dap.setup({ automatic_setup = true })
-    mason_dap.setup_handlers()
+    -- mason_dap.setup_handlers()
 
     -- Mappings --
     vim.keymap.set({ "n" }, "<leader>dB", function()
