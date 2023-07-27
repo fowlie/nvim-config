@@ -8,7 +8,7 @@ return {
         gopls = {
           settings = {
             gopls = {
-              buildFlags = { "-tags", "development" },
+              buildFlags = { "-tags", "development,integration_test" },
             },
           },
         },

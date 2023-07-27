@@ -7,3 +7,9 @@ vim.opt.conceallevel = 0
 
 -- Use fish shell
 vim.opt.shell = "/opt/homebrew/bin/fish"
+
+-- Do not highlight the entire line you are on
+vim.opt.cursorline = false
+
+-- Remind me of good habits
+vim.g.gitblame_message_when_not_committed = "oh please, commit this!"
