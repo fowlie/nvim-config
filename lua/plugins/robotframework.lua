@@ -11,6 +11,9 @@ return {
             variables = {
               { "EXECDIR", "/Users/mats/code/test-automation-suite" },
             },
+            lint = {
+              undefinedKeywords = false,
+            },
           },
         },
       },

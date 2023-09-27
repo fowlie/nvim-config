@@ -22,7 +22,7 @@ return {
     opts = {
       adapters = {
         ["neotest-go"] = {
-          args = { "-tags=development" },
+          args = { "-tags=development,integration_test" },
         },
       },
     },
