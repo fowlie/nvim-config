@@ -13,3 +13,6 @@ vim.opt.cursorline = false
 
 -- Remind me of good habits
 vim.g.gitblame_message_when_not_committed = "oh please, commit this!"
+
+-- Turn off relative numbers by default (confusing during pair programming)
+vim.g.lazyvim_relative_numbers = false
