@@ -32,4 +32,6 @@ return {
             require("treesj").setup()
         end,
     },
+
+    { "RRethy/vim-illuminate" },
 }
