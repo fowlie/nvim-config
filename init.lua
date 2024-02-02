@@ -12,10 +12,7 @@ vim.opt.rtp:prepend(lazypath)
 require('options')
 require('lazy').setup('plugins')
 
--- [[ Basic Keymaps ]]
-
--- Keymaps for better default experience
--- See `:help vim.keymap.set()`
+-- Basic Keymaps
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
@@ -28,16 +25,7 @@ vim.keymap.set('n', '<C-Down>', '<C-e>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-Left>', 'zh', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-Right>', 'zl', { noremap = true, silent = true })
 
--- Scroll buffer using Ctrl hjkl
-vim.keymap.set('n', '<C-k>', '', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-j>', '<C-e>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-h>', 'zh', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-l>', 'zl', { noremap = true, silent = true })
-
--- Quickly select the whole line
-vim.keymap.set('n', 'vv', 'V', { noremap = true, silent = true })
-
--- Move selected line up or down
+-- Move line up or down
 vim.keymap.set('n', '<A-j>', ':move +1<enter>')
 vim.keymap.set('n', '<A-k>', ':move -2<enter>')
 
@@ -52,8 +40,7 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
--- [[ Highlight on yank ]]
--- See `:help vim.highlight.on_yank()`
+-- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
@@ -63,8 +50,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
--- [[ Configure Telescope ]]
--- See `:help telescope` and `:help telescope.setup()`
+-- Configure Telescope
 require('telescope').setup {
   defaults = {
     mappings = {
