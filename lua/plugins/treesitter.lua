@@ -62,6 +62,7 @@ return {
               ['[]'] = '@class.outer',
             },
           },
+          -- Commented out because of a conflicting keybinding on <leader>a
           -- swap = {
           --   enable = true,
           --   swap_next = {
