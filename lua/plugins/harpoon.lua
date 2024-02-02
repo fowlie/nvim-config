@@ -17,9 +17,9 @@ return {
             harpoon:list():remove()
         end, { desc = "Remove from Harpoon list" })
 
-        vim.keymap.set("n", "<C-e>", function()
+        vim.keymap.set("n", "<leader>h", function()
             harpoon.ui:toggle_quick_menu(harpoon:list())
-        end)
+        end, { desc = "Toggle Harpoon quick menu"})
 
         vim.keymap.set("n", "<C-1>", function()
             harpoon:list():select(1)

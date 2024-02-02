@@ -18,9 +18,9 @@ return {
                 g = {
                     name = "git",
                     h = {
-                        name = "github",
-                        x = { "<cmd>OpenGitHubRepo<CR>", "Open GitHub repo" },
+                        name = "hunk",
                     },
+                    r = { "<cmd>OpenGitHubRepo<CR>", "Open GitHub repo" },
                 },
             },
         })
