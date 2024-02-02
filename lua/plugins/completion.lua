@@ -12,8 +12,6 @@ return {
 
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
-
-      -- 'mtoohey31/cmp-fish',
     },
   config = function ()
     local cmp = require 'cmp'
@@ -63,7 +61,6 @@ return {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
-        { name = 'fish' },
       },
     }
   end
