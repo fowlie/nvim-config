@@ -41,3 +41,6 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- Required by modicator.nvim
+vim.o.cursorline = true

@@ -1,10 +1,22 @@
+-- This file contains plugins that has no special configuration.
+
 return {
+    -- A git porcelain using the `:Git` command
     "tpope/vim-fugitive",
-    "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
+
+    -- Detect tabstop and shiftwidth automatically
+    "tpope/vim-sleuth",
+
+    -- Add visual lines to mark indents
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-    { "numToStr/Comment.nvim", opts = {} }, -- "gc" to comment visual regions/lines
+
+    -- Type `gc` to comment
+    { "numToStr/Comment.nvim", opts = {} },
+
+    -- Highlight words
     { "RRethy/vim-illuminate" },
 
+    -- Quickly open a plugins GitHub page
     {
         "fowlie/open-github-repo",
         -- dir = "~/code/open-github-repo",
@@ -14,6 +26,7 @@ return {
         end,
     },
 
+    -- Toggle Split or Join using Tree-sitter
     {
         "Wansmer/treesj",
         dependencies = { "nvim-treesitter/nvim-treesitter" },
@@ -22,17 +35,19 @@ return {
         end,
     },
 
-    {
-        "petertriho/nvim-scrollbar",
-        config = function()
-            require("scrollbar").setup({ handlers = { gitsigns = true } })
-        end,
-    },
-
+    -- Automatically insert matching symbols
     {
         "m4xshen/autoclose.nvim",
         config = function()
             require("autoclose").setup()
+        end,
+    },
+
+    -- Use colors to indicate mode
+    {
+        "mawkler/modicator.nvim",
+        config = function()
+            require("modicator").setup()
         end,
     },
 }
