@@ -8,9 +8,13 @@ return {
     "tpope/vim-sleuth",
 
     -- Add visual lines to mark indents
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {
-        indent = { char = "┊" }, -- U+9482 
-    } },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {
+            indent = { char = "┊" }, -- U+9482
+        },
+    },
 
     -- Type `gc` to comment
     { "numToStr/Comment.nvim", opts = {} },
@@ -50,6 +54,13 @@ return {
         "mawkler/modicator.nvim",
         config = function()
             require("modicator").setup()
+        end,
+    },
+
+    {
+        "karb94/neoscroll.nvim",
+        config = function()
+            require("neoscroll").setup()
         end,
     },
 }
