@@ -1,4 +1,4 @@
--- This file contains plugins that has no special configuration.
+-- This file contains plugins with minimal config
 
 return {
     -- A git porcelain using the `:Git` command
@@ -8,7 +8,9 @@ return {
     "tpope/vim-sleuth",
 
     -- Add visual lines to mark indents
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {
+        indent = { char = "┊" }, -- U+9482 
+    } },
 
     -- Type `gc` to comment
     { "numToStr/Comment.nvim", opts = {} },

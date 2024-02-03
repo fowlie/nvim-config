@@ -22,6 +22,9 @@ return {
                     },
                     r = { "<cmd>OpenGitHubRepo<CR>", "Open GitHub repo" },
                 },
+                s = {
+                    name = "search",
+                },
             },
         })
     end,
