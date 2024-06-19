@@ -6,7 +6,7 @@
 vim.opt.conceallevel = 0
 
 -- Use fish shell
-vim.opt.shell = "/opt/homebrew/bin/fish"
+vim.opt.shell = "/home/linuxbrew/.linuxbrew/bin/fish"
 
 -- Do not highlight the entire line you are on
 vim.opt.cursorline = false
