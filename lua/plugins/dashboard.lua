@@ -3,10 +3,10 @@ return {
   optional = true,
   opts = function(_, opts)
     local projects = {
-      action = "edit ~/.config/skhd/skhdrc",
-      desc = " Skdh config",
+      action = "edit ~/.config/fish/config.fish",
+      desc = " Fish config",
       icon = " ",
-      key = "y",
+      key = "fc",
     }
 
     projects.key_format = "  %s"
